@@ -1,3 +1,10 @@
+Tarefas
+
+- [ ] Estrutura geral
+- [ ] Criar estrutura das cartas
+- [ ] Criar pagina de login
+- [ ] Criar tela de cadastro
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,8 +1,13 @@
 import './main.css';
 import {useState, useEffect} from 'react';
 import ModalPesquisa from '../ModalPesquisa';
+import Card from '../Card';
 
 const Main = () => {
+   const quantidadeCartas = [];
+   {for(let i =0; i<20; i++){
+      quantidadeCartas.push(i);
+   }} 
    const [mostrar, setMostrar] = useState(false);
 
    useEffect(() => {
@@ -17,7 +22,10 @@ const Main = () => {
       <main className={'main'}>
          <section className={'main__pesquisa'}>
             <button onClick={mostraModal}>Pesquisar</button>
-            <ModalPesquisa mostrar={mostrar} esconderModal={() => {setMostrar(false)}}  />
+            <ModalPesquisa mostrar={mostrar} esconderModal={() => {setMostrar(false)}}  />            
+         </section>
+         <section className={'main__cartas'}>
+            {quantidadeCartas.map((e) => <Card key={e}/>)}
          </section>
       </main>
    )
