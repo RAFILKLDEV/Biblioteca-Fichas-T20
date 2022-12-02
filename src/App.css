@@ -1,3 +1,9 @@
+:root{
+  --margem-lateral: 5vw;
+
+  
+}
+
 .App {
   text-align: center;
 }

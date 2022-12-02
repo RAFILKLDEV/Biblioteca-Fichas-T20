@@ -1,4 +1,37 @@
 .header{
-   background-color: aqua;
    height: 12vh;
+   padding: 0 var(--margem-lateral);
+   background-color: aqua;
+   display: flex;
+   justify-content: space-between;
+
+}
+
+.header__logo{
+   height: 100%;
+   width: 24vh;
+   background-color: gray;
+}
+
+
+.header__criador-de-ficha{
+   height: 100%;
+   width: 48vh;
+   display: flex;
+   justify-content: space-evenly;
+   background-color: gray;
+}
+
+.criador-de-ficha__npc{
+   height: 100%;
+   width: 12vh;
+   display: inline-block;
+   background-color: beige;
+}
+
+.criador-de-ficha__monstro{
+   height: 100%;
+   width: 12vh;
+   display: inline-block;
+   background-color: beige;
 }
