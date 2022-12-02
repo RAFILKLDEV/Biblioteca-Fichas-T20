@@ -1,6 +1,18 @@
-.modal-pesquisa{
-   width: 200px;
-   height: 200px;
+.modal__fundo{
+   opacity: 0;
+   z-index: -1;
+   position: fixed;
+   inset: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__pesquisa{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 70vw;
+   height: 70vw;
    background-color: red;
    opacity: 0;
    z-index: -1;
