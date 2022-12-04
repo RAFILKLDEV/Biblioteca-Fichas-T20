@@ -1,4 +1,11 @@
 import { initializeApp } from "firebase/app";
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  getFirestore,
+} from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBPap_2XBwhRNU7ejE4ZRbcxyMotEN7xGI",
@@ -11,5 +18,27 @@ const firebaseConfig = {
 };
 
 // Incializando o Firebase
-const app = initializeApp(firebaseConfig);
+const firebase = initializeApp(firebaseConfig);
 
+const dataBase = getFirestore(firebase);
+const userCollectionRef = collection(dataBase, "users");
+
+// Receber Usuarios
+export const getUsers = async (setUser) => {
+  const data = await getDocs(userCollectionRef);
+  await setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+};
+
+export const regUser = async (setDoc, name, email, sheets) => {
+  await setDoc(userCollectionRef, {
+    name,
+    email,
+    sheets,
+  });
+};
+
+export const deleteUser = async (id) => {
+  const userDoc = doc(dataBase, "users", id);
+  await deleteDoc(userDoc);
+  getUsers();
+};
