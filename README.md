@@ -7,10 +7,18 @@
 
 ### Tarefas Firebase
 
-- [X] Adicionar Firebase
-- [X] Configurar Firebase
-- [X] Adicionar as primeiras funções
-- [ ] CRUD
+- [X] Adicionar Firebase 
+- [X] Configurar Firebase 
+
+- [X] Configurar Firebase Store
+- [X] Adicionar as funções de adicionar e deletar
+- [ ] CRUD completo do Firebase Store
+
+- [] Configurar Firebase Authentication
+- [] Configurar ID de Usuário
+- [] Associar ID ao Firebase Store
+- [] Implementar Firebase Authentication a Register Page
+- [] Implementar Firebase Authentication a Login Page
 
 ### Deploy
 

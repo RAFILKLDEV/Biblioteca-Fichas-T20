@@ -23,12 +23,13 @@ const firebase = initializeApp(firebaseConfig);
 const dataBase = getFirestore(firebase);
 const userCollectionRef = collection(dataBase, "users");
 
-// Receber Usuarios
+// Receber Informações do Usuário do Firebase Store
 export const getUsers = async (setUser) => {
   const data = await getDocs(userCollectionRef);
   await setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
 };
 
+// Registrar Informações do Usuário no Firebase Store
 export const regUser = async (setDoc, name, email, sheets) => {
   await setDoc(userCollectionRef, {
     name,
@@ -37,6 +38,7 @@ export const regUser = async (setDoc, name, email, sheets) => {
   });
 };
 
+// Deletar Informações do Usuário no Firebase Store
 export const deleteUser = async (id) => {
   const userDoc = doc(dataBase, "users", id);
   await deleteDoc(userDoc);

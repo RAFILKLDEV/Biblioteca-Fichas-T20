@@ -1,17 +1,17 @@
-.main{
-   min-height: 80vh;
-   background-color: blueviolet;
+.main {
+  min-height: 80vh;
+  background-color: blueviolet;
 }
 
-.main__pesquisa{
-   padding: 1em var(--margem-lateral);
-   background-color: lightgray;
+.main__pesquisa {
+  padding: 1em var(--margem-lateral);
+  background-color: lightgray;
 }
 
-.main__cartas{
-   display: flex;
-   flex-wrap: wrap;
-   padding: 1em var(--margem-lateral);
-   gap: 2vw;
-   justify-content: space-evenly;
+.main__cartas {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em var(--margem-lateral);
+  gap: 2vw;
+  justify-content: space-evenly;
 }
