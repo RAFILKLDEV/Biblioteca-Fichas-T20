@@ -1,0 +1,13 @@
+.login__bg{
+   background-color: #fdfdfd;
+   position: absolute;
+   inset: 0;
+}
+
+.login__form{
+   background-color: #666;
+   inset: 15vh 5vw;
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+}
