@@ -2,12 +2,12 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
-import Login from "./components/Login";
+import Login from "./pages/login.js";
+
 
 function App() {
-  return (
+  return (     
     <div className="App">
-      <Login />
       <Header />
       <Main />
       <Footer />

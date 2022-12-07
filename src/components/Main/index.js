@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import ModalPesquisa from "../ModalPesquisa";
 import Card from "../Card";
 
+
 const Main = () => {
   // const quantidadeCartas = [];
   // {for(let i =0; i<20; i++){
