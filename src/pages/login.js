@@ -3,7 +3,7 @@ import Form from "../components/Form";
 
 function Login() {
   return (
-    <div className="App">
+    <div>
       <Form />
     </div>
   );

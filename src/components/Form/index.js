@@ -6,37 +6,37 @@ function Form(){
       <section className={'login'}>
          <div className={'login__bg'}></div>
          <div className={'login__form'}>
-            <form>
-               <h4>Login</h4>
+            <form className={'form__container'}>
+               <h4 className={'form__title'}>Login</h4>
                <div>
-                  <label htmlFor={'email'}>E-mail</label>
+                  <label className={'form__label'} htmlFor={'email'}>E-mail</label>
                   <input type={'email'} id={'email'} />
                </div>
                <div>
-                  <label htmlFor={'senha'}>Senha</label>
+                  <label className={'form__label'} htmlFor={'senha'}>Senha</label>
                   <input type={'password'} id={'senha'} />
                </div>
-               <Link to={'/Fichas'} ><button>Entrar</button></Link>
+               <button className={'form__button'}><Link to={'/Fichas'} >Entrar</Link></button>
             </form>
-            <form>
-               <h4>Cadastro</h4>
+            <form className={'form__container'}>
+               <h4 className={'form__title'}>Cadastro</h4>
                <div>
-                  <label htmlFor={'apelido'}>Apelido</label>
+                  <label className={'form__label'} htmlFor={'apelido'}>Apelido</label>
                   <input type={'text'} id={'apelido'} />
                </div>
                <div>
-                  <label htmlFor={'email-cadastro'}>E-mail</label>
+                  <label className={'form__label'} htmlFor={'email-cadastro'}>E-mail</label>
                   <input type={'email'} id={'email-cadastro'} />
                </div>
                <div>
-                  <label htmlFor={'senha-cadastro'}>Senha</label>
+                  <label className={'form__label'} htmlFor={'senha-cadastro'}>Senha</label>
                   <input type={'password'} id={'senha-cadastro'} />
                </div>
                <div>
-                  <label htmlFor={'senha-confirma'}>Confirme a senha</label>
+                  <label className={'form__label'} htmlFor={'senha-confirma'}>Confirme a senha</label>
                   <input type={'password'} id={'senha-confirma'} />
                </div>
-               <button>Entrar</button>
+               <button className={'form__button'}>Entrar</button>
             </form>
 
          </div>
