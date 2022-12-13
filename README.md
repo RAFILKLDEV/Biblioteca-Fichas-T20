@@ -1,8 +1,12 @@
 ### Tarefas Front-End
 
-- [ ] Estrutura geral
+- [ ] Menu hamburguer para mobile
+- [ ] Acao de entrada menu vertical
+- [ ] Campo para nome do Usuário e foto
+- [ ] Opção de sair
+- [ ] Jogar pesquisa para o Header
 - [ ] Criar estrutura das cartas
-- [ ] Criar pagina de login
+- [ ] Criar pagina de login uma ao lado da outra
 - [ ] Criar tela de cadastro
 
 ### Tarefas Firebase

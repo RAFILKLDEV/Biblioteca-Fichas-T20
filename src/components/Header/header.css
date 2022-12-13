@@ -1,37 +1,46 @@
 .header{
-   height: 12vh;
+   height: calc(7vh + 7vw);
    padding: 0 var(--margem-lateral);
-   background-color: aqua;
+   background-image: linear-gradient(45deg, var(--cor-secundaria) -100%, var(--cor-base), var(--cor-secundaria) 200%);
    display: flex;
    justify-content: space-between;
-
 }
 
 .header__logo{
-   height: 100%;
-   width: 24vh;
-   background-color: gray;
+   display: flex;
+   align-items: center;
+   font-size: var(--fonte-grande);
+
+}
+
+.header__logo > a{
+   text-decoration: none;
+   color: var(--preto);
+   font-weight: bold;
+}
+
+.logo__nome{
+   display: none;
 }
 
 
 .header__criador-de-ficha{
-   height: 100%;
-   width: 48vh;
    display: flex;
    justify-content: space-evenly;
-   background-color: gray;
+   align-items: center;
+   gap: 2.5vw;
+   font-size: var(--fonte-pequena);
 }
 
-.criador-de-ficha__npc{
-   height: 100%;
-   width: 12vh;
-   display: inline-block;
-   background-color: beige;
+.criador-de-ficha__botao{
+   background-image: linear-gradient(45deg, var(--cor-base) -10%, var(--cor-secundaria), var(--cor-base) 120%);
+   border: 1px solid var(--preto);
+   padding: .25em .75em;
+
 }
 
-.criador-de-ficha__monstro{
-   height: 100%;
-   width: 12vh;
-   display: inline-block;
-   background-color: beige;
+@media screen and (min-width: 800px){
+   .logo__nome{
+      display: inline-block;
+   }
 }

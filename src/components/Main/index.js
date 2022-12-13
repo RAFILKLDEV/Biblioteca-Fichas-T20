@@ -5,11 +5,6 @@ import Card from "../Card";
 
 
 const Main = () => {
-  // const quantidadeCartas = [];
-  // {for(let i =0; i<20; i++){
-  //    quantidadeCartas.push(i);
-  // }}
-
   const [mostrar, setMostrar] = useState(false);
 
   useEffect(() => {
@@ -34,7 +29,6 @@ const Main = () => {
         />
       </section>
       <section className={"main__cartas"}>
-        {/* Versão Reduzida */}
         {Array(20)
           .fill("")
           .map((e) => (
