@@ -58,5 +58,14 @@
    color: #666;
 }
 
+@media screen and (min-width: 750px){
+   .login__form{
+      flex-direction: row;
+      gap: 50px;
+   }
 
+   .form__container{
+      width: 35%;
+   }
 
+}
