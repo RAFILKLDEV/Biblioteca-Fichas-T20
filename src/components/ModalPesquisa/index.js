@@ -8,11 +8,11 @@ const ModalPesquisa = ({ mostrar, esconderModal }) => {
     >
       <div className={`modal__pesquisa ${mostrar ? "mostrar" : ""}`}>
         <div className={"pesquisa__campo"}>
-          <label for={"npc"}>NPC</label>
+          <label htmlFor={"npc"}>NPC</label>
           <input type={"radio"} id={"npc"} />
         </div>
         <div className={"pesquisa__campo"}>
-          <label for={"monster"}>Monstro</label>
+          <label htmlFor={"monster"}>Monstro</label>
           <input type={"radio"} id={"monster"} />
         </div>
         <button>Pesquisar</button>

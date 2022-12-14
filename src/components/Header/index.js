@@ -3,10 +3,13 @@ import {Link} from 'react-router-dom';
 import { useState, useEffect } from "react";
 import ModalPesquisa from "../ModalPesquisa";
 
-
-
 const Header = () => {
   const [mostrar, setMostrar] = useState(false);
+  const [estadoMenu, setEstadoMenu] = useState("fechado");
+
+   useEffect(() => {
+      console.log(estadoMenu)
+   }, [estadoMenu])
 
   useEffect(() => {
     mostrar === true
@@ -14,9 +17,13 @@ const Header = () => {
       : (document.body.style.overflow = "unset");
   }, [mostrar]);
 
-  function mostraModal() {
-    setMostrar(true);
-  }
+   function mudaEstadoMenu(estadoMenu){
+      estadoMenu === "fechado" ? setEstadoMenu("aberto") : setEstadoMenu("fechado");   
+   }
+
+   function mostraModal() {
+      setMostrar(true);
+   }
 
    return(
       <header className={'header'}>
@@ -24,19 +31,26 @@ const Header = () => {
             <Link to="/">T20</Link>
             <p className={'logo__nome'}>Nome do Projeto</p>
          </div>
-         <div className={'header__criador-de-ficha'}>
-            <button className={'criador-de-ficha__botao'}>CRIAR NPC</button>
-            <button className={'criador-de-ficha__botao'}>CRIAR MONSTRO</button>       
+         <div className="header__hamburguer" onClick={() => mudaEstadoMenu(estadoMenu)}>
+            <div className="hamburguer__linha"></div>
+            <div className="hamburguer__linha"></div>
+            <div className="hamburguer__linha"></div>
          </div>
-         <div className={'header__criador-de-ficha'}>
-            <button className={'criador-de-ficha__botao'} onClick={mostraModal}>Pesquisar</button>
-         <ModalPesquisa
-            mostrar={mostrar}
-            esconderModal={() => {
-               setMostrar(false);
-            }}
-         />
-         </div>
+         <nav>
+            <div className={'header__criador-de-ficha'}>
+               <button className={'criador-de-ficha__botao'}>CRIAR NPC</button>
+               <button className={'criador-de-ficha__botao'}>CRIAR MONSTRO</button>       
+            </div>
+            <div className={'header__criador-de-ficha'}>
+               <button className={'criador-de-ficha__botao'} onClick={mostraModal}>Pesquisar</button>
+               <ModalPesquisa
+                  mostrar={mostrar}
+                  esconderModal={() => {
+                     setMostrar(false);
+                  }}
+               />
+            </div>
+         </nav>
 
       </header>
    )

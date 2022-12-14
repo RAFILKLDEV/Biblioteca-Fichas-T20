@@ -10,8 +10,8 @@ const Main = () => {
       <section className={"main__cartas"}>
         {Array(20)
           .fill("")
-          .map((e) => (
-            <Card key={e} />
+          .map((e, i) => (
+            <Card key={i} />
           ))}
       </section>
     </main>
