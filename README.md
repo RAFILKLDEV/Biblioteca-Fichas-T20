@@ -1,10 +1,11 @@
 ### Tarefas Front-End
 
+- [ ] Jogar pesquisa para o Header
+- [ ] Organizar HEader (como deve ser a pesquisa?)
 - [ ] Menu hamburguer para mobile
-- [ ] Acao de entrada menu vertical
+- [ ] Acao de entrada menu vertical (mobile)
 - [ ] Campo para nome do Usuário e foto
 - [ ] Opção de sair
-- [ ] Jogar pesquisa para o Header
 - [ ] Criar estrutura das cartas
 - [ ] Criar pagina de login uma ao lado da outra
 - [ ] Criar tela de cadastro

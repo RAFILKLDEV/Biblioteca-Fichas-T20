@@ -3,11 +3,6 @@
   background-color: blueviolet;
 }
 
-.main__pesquisa {
-  padding: 1em var(--margem-lateral);
-  background-color: lightgray;
-}
-
 .main__cartas {
   display: flex;
   flex-wrap: wrap;
