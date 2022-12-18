@@ -1,6 +1,6 @@
-import React from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import { Navigate } from "react-router";
+import { auth } from "../../Firebase";
 import "./styles.css";
 
 export function Register() {
@@ -8,19 +8,27 @@ export function Register() {
   const [email, setEmail] = useState("");
   const [confirmPassword, setConfirmPassowrd] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
 
   function handleRegister() {
-    if (password === confirmPassword) {
-      console.log("Registrou");
-    } else console.log("Informações não Conferem");
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+        // ..
+      });
   }
 
   return (
     <div className="Register">
       <div className="Form-Container">
         <h2>Register</h2>
-        {error && <div>Informações não conferem.</div>}
+        {/* {error && <div>Informações não conferem.</div>} */}
         <div>
           <div className="Form-Title">Apelido:</div>
           <input

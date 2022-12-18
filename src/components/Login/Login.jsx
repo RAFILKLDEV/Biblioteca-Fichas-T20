@@ -1,21 +1,28 @@
-import React from "react";
+import { signInWithEmailAndPassword } from "@firebase/auth";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../Firebase";
 import "./styles.css";
-import { createUserWithEmailAndPassword } from "@firebase/auth";
 
-export function Login() {
+export function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [useCreateUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
 
   function handleLogin(e) {
-    e.preventDafault();
-    createUserWithEmailAndPassword(email, password);
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        props.setUser({ email: user.email });
+        navigate("/home")
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(errorMessage);
+      });
   }
 
   return (

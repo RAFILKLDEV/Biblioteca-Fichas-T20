@@ -3,10 +3,10 @@ import Header from "../../components/Header";
 import Main from "../../components/Main";
 import Footer from "../../components/Footer";
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <Header />
+      <Header user={props.user} />
       <Main />
       <Footer />
     </div>
