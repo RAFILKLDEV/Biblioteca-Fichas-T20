@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { getUsers } from "./Firebase";
+import { getUsers } from "../../Firebase";
 
-export default function AppTeste() {
+export default function FirebaseTeste() {
   const [users, setusers] = useState([]);
 
   useEffect(() => {

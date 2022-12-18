@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import {
   collection,
   deleteDoc,
@@ -22,6 +23,10 @@ const firebase = initializeApp(firebaseConfig);
 
 const dataBase = getFirestore(firebase);
 const userCollectionRef = collection(dataBase, "users");
+
+// Auth Firebase
+
+export const auth = getAuth(firebase);
 
 // Receber Informações do Usuário do Firebase Store
 export const getUsers = async (setUser) => {

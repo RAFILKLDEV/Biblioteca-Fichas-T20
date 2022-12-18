@@ -1,24 +1,28 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "../../Firebase";
 import "./styles.css";
+import { createUserWithEmailAndPassword } from "@firebase/auth";
 
 export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
-
+  const [useCreateUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
   const navigate = useNavigate();
 
-  function handleLogin() {
-    navigate("/home");
+  function handleLogin(e) {
+    e.preventDafault();
+    createUserWithEmailAndPassword(email, password);
   }
 
   return (
     <div className="Login">
       <div className="Form-Container">
         <h2>Login</h2>
-        {error && <div>Informações não conferem.</div>}
+        {/* {error && <div>Informações não conferem.</div>} */}
         <div>
           <div className="Form-Title">E-mail:</div>
           <input

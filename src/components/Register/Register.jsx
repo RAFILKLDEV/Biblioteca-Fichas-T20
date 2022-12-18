@@ -4,12 +4,16 @@ import { Navigate } from "react-router";
 import "./styles.css";
 
 export function Register() {
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [apelido, setApelido] = useState("");
+  const [email, setEmail] = useState("");
+  const [confirmPassword, setConfirmPassowrd] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
 
-  function handleLogin() {
-    Navigate("/home");
+  function handleRegister() {
+    if (password === confirmPassword) {
+      console.log("Registrou");
+    } else console.log("Informações não Conferem");
   }
 
   return (
@@ -21,14 +25,14 @@ export function Register() {
           <div className="Form-Title">Apelido:</div>
           <input
             type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={apelido}
+            onChange={(e) => setApelido(e.target.value)}
           />
         </div>
         <div>
           <div className="Form-Title">E-mail:</div>
           <input
-            type="text"
+            type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
@@ -45,11 +49,11 @@ export function Register() {
           <div className="Form-Title">Confirme a Senha:</div>
           <input
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            value={confirmPassword}
+            onChange={(e) => setConfirmPassowrd(e.target.value)}
           />
         </div>
-        <button onClick={handleLogin}>Registrar</button>
+        <button onClick={handleRegister}>Registrar</button>
       </div>
     </div>
   );
