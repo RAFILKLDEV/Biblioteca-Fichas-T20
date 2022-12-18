@@ -1,14 +1,12 @@
-import "./App.css";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import Main from "../../components/Main";
-import Footer from "../../components/Footer";
+import "./App.css";
 
 function App(props) {
   return (
     <div className="App">
       <Header user={props.user} />
-      <Main />
-      <Footer />
+      <Main user={props.user} />
     </div>
   );
 }

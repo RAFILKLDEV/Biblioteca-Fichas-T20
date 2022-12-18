@@ -1,0 +1,19 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  border-bottom: var(--red) 12px double;
+}
+
+.Header-Title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 100px;
+  font-size: 1.8rem;
+}

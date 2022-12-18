@@ -1,18 +1,18 @@
-:root{
+:root {
   --margem-lateral: 5vw;
   --margem-vertical: calc(2vw + 2vh);
 
-  --cor-base: #B5ACB2;
-  --cor-secundaria: #C26953;
-  --cor-contraste: #BF83CC;
-  --preto: #211F21; 
+  --cor-base: #b5acb2;
+  --cor-secundaria: #c26953;
+  --cor-contraste: #bf83cc;
+  --preto: #211f21;
 
-  --fonte-pequena: clamp(.875rem, 1vw, .75rem);
+  --fonte-pequena: clamp(0.875rem, 1vw, 0.75rem);
   --fonte-media: clamp(1.125rem, 1vw, 1.125rem);
-  --fonte-grande: clamp(1.75rem, 1vw, 2rem)
+  --fonte-grande: clamp(1.75rem, 1vw, 2rem);
 }
 
-.App{
+.App {
   font-size: var(--fonte-media);
   box-sizing: border-box;
   font-family: cursive;

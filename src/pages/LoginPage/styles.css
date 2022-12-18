@@ -7,7 +7,9 @@
   width: 100vw;
   height: 100vh;
 
-  background-color: cadetblue;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .LoginPage h2 {
@@ -20,9 +22,12 @@
   flex-direction: column;
   width: 100%;
   gap: 10px;
-  background-color: aquamarine;
-  width: 300px;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 200px;
   padding: 50px;
+  border: var(--red) double 12px;
 }
 
 .Form-Container input {

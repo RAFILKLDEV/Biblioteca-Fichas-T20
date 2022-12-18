@@ -1,12 +1,12 @@
 .main {
-  min-height: 80vh;
-  background-color: blueviolet;
+  height: 85vh;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .main__cartas {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1em var(--margem-lateral);
-  gap: 2vw;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }

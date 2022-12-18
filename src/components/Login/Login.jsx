@@ -15,11 +15,10 @@ export function Login(props) {
         // Signed in
         const user = userCredential.user;
         props.setUser({ email: user.email });
-        navigate("/home")
+        navigate("/home");
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage);
       });
