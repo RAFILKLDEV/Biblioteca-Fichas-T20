@@ -1,10 +1,10 @@
 import "./card.css";
 
-const Card = () => {
+const Card = (props) => {
   return (
     <div className={"main__card"}>
-      <div className={"card__image"}>Image</div>
-      <p className={"card__name"}>NPC or monster's name</p>
+      <div className={"card__image"}>{props.name}</div>
+      <p className={"card__name"}>{props.email}</p>
     </div>
   );
 };

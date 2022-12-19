@@ -1,5 +1,6 @@
 .main {
-  height: 85vh;
+  min-height: 100%;
+  height: 100%;
   background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,6 +8,8 @@
 
 .main__cartas {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  justify-items: center;
+  row-gap: 40px;
+  padding: 100px;
 }
