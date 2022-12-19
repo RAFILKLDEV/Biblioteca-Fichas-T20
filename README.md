@@ -1,35 +1,39 @@
 ### Tarefas Front-End
 
-- [ ] Formulario validacao de senha
-- [ ] Validacoes gerais do formulario
-- [ ] Impedir clique para link
-- [ ] Mostrar fichar 4 x 4
-- [ ] Fazer paginacao
-- [ ] Focar em desktop
-- [ ] Jogar pesquisa para o Header
-- [ ] Organizar Header (como deve ser a pesquisa?)
-- [ ] Acao de entrada menu vertical (mobile)
-- [ ] Campo para nome do Usuário e foto
-- [ ] Opção de sair
-- [ ] Criar estrutura das cartas
-- [ ] Criar pagina de login uma ao lado da outra
-- [ ] Criar tela de cadastro
-- [ ] Menu hamburguer para mobile
+#### Tarefas Pagina Cadastro
 
-### Tarefas Firebase
+- [X] Formulario validacao de senha
+- [X] Formulario validacao de senha
+- [X] Validacoes gerais do formulario
+- [X] Logar no Firebase
+- [X] Registrar-se no Firebase
+- [X] Design Css
+
+#### Tarefas Pagina Fichas
+
+- [X] Estrutura HTML e CSS
+- [X] Renderizar Cards
+- [X] Filtro de Pesquisa
+- [X] Input de Pesquisa
+- [X] Input Dinamico Npc / Monstro
+- [ ] Renderizar Cards com Mockup de Fichas
+- [ ] Renderizar imagens salvas no Firebase Store
+
+### Tarefas Back-End
 
 - [X] Adicionar Firebase 
 - [X] Configurar Firebase 
 
 - [X] Configurar Firebase Store
 - [X] Adicionar as funções de adicionar e deletar
-- [ ] CRUD completo do Firebase Store
+- [X] CRUD completo do Firebase Store
 
-- [] Configurar Firebase Authentication
-- [] Configurar ID de Usuário
-- [] Associar ID ao Firebase Store
-- [] Implementar Firebase Authentication a Register Page
-- [] Implementar Firebase Authentication a Login Page
+- [X] Configurar Firebase Authentication
+- [X] Configurar ID de Usuário
+- [X] Implementar Firebase Authentication no LoginPage
+- [ ] Associar ID ao Firebase Store
+=
+
 
 ### Deploy
 
