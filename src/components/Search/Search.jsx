@@ -9,7 +9,10 @@ export function Search(props) {
       />
       <select
         value={props.bars.mode}
-        onChange={(e) => props.bars.setMode(e.target.value)}
+        onChange={(e) => {
+          props.bars.setMode(e.target.value);
+          props.bars.setSelect("Todos");
+        }}
       >
         <option value="Npcs">Npcs</option>
         <option value="Monstros">Monstros</option>
@@ -20,10 +23,10 @@ export function Search(props) {
           value={props.bars.select}
           onChange={(e) => props.bars.setSelect(e.target.value)}
         >
-          <option value="-//-">Todos</option>
-          <option value="Todos">Lacaio</option>
-          <option value="Todos">Solo</option>
-          <option value="Todos">Especial</option>
+          <option>Todos</option>
+          <option>Lacaio</option>
+          <option>Solo</option>
+          <option>Especial</option>
         </select>
       )}
 
@@ -32,10 +35,10 @@ export function Search(props) {
           value={props.bars.select}
           onChange={(e) => props.bars.setSelect(e.target.value)}
         >
-          <option value="-//-">Todos</option>
-          <option value="Todos">Ermos</option>
-          <option value="Todos">Caverna</option>
-          <option value="Todos">Especial</option>
+          <option>Todos</option>
+          <option>Ermos</option>
+          <option>Caverna</option>
+          <option>Especial</option>
         </select>
       )}
     </div>
