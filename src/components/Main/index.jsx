@@ -11,8 +11,6 @@ export const Main = () => {
   const [mode, setMode] = useState("Npcs");
   const [select, setSelect] = useState("");
 
-  console.log("kek");
-
   useEffect(() => {
     getUsers(setUser);
     console.log(user);
@@ -20,7 +18,10 @@ export const Main = () => {
 
   return (
     <main className={"main"}>
-      <Search search={{ search, setSearch }} />
+      <Search
+        bars={{ mode, setMode, select, setSelect }}
+        search={{ search, setSearch }}
+      />
       <section className={"main__cartas"}>
         {user.map((e, i) => {
           if (e.name.toLowerCase().includes(search.toLowerCase())) {
