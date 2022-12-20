@@ -9,24 +9,22 @@ export function Login(props) {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  function handleLogin(e) {
+  function handleLogin() {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        const user = userCredential.user;
-        props.setUser({ email: user.email });
+        props.setUser(userCredential.user.uid);
         navigate("/home");
         // ...
       })
       .catch((error) => {
-        const errorMessage = error.message;
-        alert(errorMessage);
+        alert(error.message);
       });
   }
 
   return (
     <div className="Login">
-      <div className="Form-Container">
+      <form className="Form-Container">
         <h2>Login</h2>
         {/* {error && <div>Informações não conferem.</div>} */}
         <div>
@@ -43,10 +41,11 @@ export function Login(props) {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            autoComplete="on"
           />
         </div>
         <button onClick={handleLogin}>Entrar</button>
-      </div>
+      </form>
     </div>
   );
 }

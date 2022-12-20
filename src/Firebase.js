@@ -4,6 +4,7 @@ import {
   collection,
   deleteDoc,
   doc,
+  getDoc,
   getDocs,
   getFirestore,
 } from "firebase/firestore";
@@ -21,17 +22,22 @@ const firebaseConfig = {
 // Incializando o Firebase
 const firebase = initializeApp(firebaseConfig);
 
-const dataBase = getFirestore(firebase);
-const userCollectionRef = collection(dataBase, "users");
+export const dataBase = getFirestore(firebase);
+export const userCollectionRef = collection(dataBase, "users");
 
 // Auth Firebase
-
 export const auth = getAuth(firebase);
 
-// Receber Informações do Usuário do Firebase Store
+// Receber Informações dos Usuários do Firebase Store
 export const getUsers = async (setUser) => {
   const data = await getDocs(userCollectionRef);
   await setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+};
+
+// Receber Informações do Usuário do Firebase Store
+export const getOneUser = async (setUser, id) => {
+  const data = await getDoc(doc(dataBase, "users", id));
+  setUser(data.data());
 };
 
 // Registrar Informações do Usuário no Firebase Store

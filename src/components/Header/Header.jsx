@@ -1,6 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from "react";
+import { getOneUser } from "../../Firebase";
 import "./styles.css";
 
 const Header = (props) => {
+  const [info, setInfo] = useState([]);
+
+  useEffect(() => {
+    getOneUser(setInfo, props.user);
+  }, []);
+
   return (
     <div className="Header">
       <div className="Header-Title">
@@ -12,7 +21,7 @@ const Header = (props) => {
           height={30}
         />
       </div>
-      <div className="Header-Title">{props.user.email}</div>
+      <div className="Header-Title">{info.user?.apelido}</div>
     </div>
   );
 };

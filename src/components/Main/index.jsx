@@ -13,7 +13,6 @@ export const Main = () => {
 
   useEffect(() => {
     getUsers(setUser);
-    console.log(user);
   }, []);
 
   return (
@@ -24,9 +23,7 @@ export const Main = () => {
       />
       <section className={"main__cartas"}>
         {user.map((e, i) => {
-          console.log(e.tipo, "tipo");
           if (select !== "Todos") {
-            console.log("Caso1");
             if (e.tipo === select) {
               if (search) {
                 if (e.name.toLowerCase().includes(search.toLowerCase())) {
@@ -40,12 +37,10 @@ export const Main = () => {
           }
 
           if (search) {
-            console.log("Caso2");
             if (e.name.toLowerCase().includes(search.toLowerCase())) {
               return <Card key={e.name + i} name={e.name} email={e.email} />;
             }
-          } else return <Card key={e.name + i} name={e.name} email={e.email} />;
-
+          }
           return null;
         })}
       </section>
