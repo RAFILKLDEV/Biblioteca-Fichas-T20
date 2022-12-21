@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { useRef } from "react";
 import { useState } from "react";
 import { auth, dataBase } from "../../Firebase";
 import "./styles.css";
@@ -10,10 +11,14 @@ export function Register() {
   const [confirmPassword, setConfirmPassowrd] = useState("");
   const [password, setPassword] = useState("");
 
+  const apelidoRef = useRef();
+  const passwordRef = useRef();
+  const confirmPasswordRef = useRef();
+  const emailRef = useRef();
+
   function handleRegister() {
     createUserWithEmailAndPassword(auth, email, password)
       .then(async (userCredential) => {
-        // Signed in
         const uid = userCredential.user.uid;
         await setDoc(doc(dataBase, "users", uid), {
           user: {
@@ -22,23 +27,22 @@ export function Register() {
           },
         });
         alert("Usuários Cadastrado com Sucesso!");
-        // ...
       })
       .catch((error) => {
-        const errorMessage = error.message;
-        alert(errorMessage);
-        // ..
+        alert(error.message);
       });
   }
 
+  function errorMessage(msg) {}
+
   return (
     <div className="Register">
-      <form className="Form-Container">
+      <div className="Form-Container">
         <h2>Register</h2>
-        {/* {error && <div>Informações não conferem.</div>} */}
         <div>
           <div className="Form-Title">Apelido:</div>
           <input
+            ref={apelidoRef}
             type="text"
             value={apelido}
             onChange={(e) => setApelido(e.target.value)}
@@ -47,6 +51,7 @@ export function Register() {
         <div>
           <div className="Form-Title">E-mail:</div>
           <input
+            ref={emailRef}
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -55,6 +60,7 @@ export function Register() {
         <div>
           <div className="Form-Title">Senha:</div>
           <input
+            ref={passwordRef}
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -64,6 +70,7 @@ export function Register() {
         <div>
           <div className="Form-Title">Confirme a Senha:</div>
           <input
+            ref={confirmPasswordRef}
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassowrd(e.target.value)}
@@ -71,7 +78,7 @@ export function Register() {
           />
         </div>
         <button onClick={handleRegister}>Registrar</button>
-      </form>
+      </div>
     </div>
   );
 }

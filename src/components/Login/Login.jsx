@@ -14,6 +14,7 @@ export function Login(props) {
       .then((userCredential) => {
         // Signed in
         props.setUser(userCredential.user.uid);
+        localStorage.setItem("User", userCredential.user.uid);
         navigate("/home");
         // ...
       })
@@ -24,7 +25,7 @@ export function Login(props) {
 
   return (
     <div className="Login">
-      <form className="Form-Container">
+      <div className="Form-Container">
         <h2>Login</h2>
         {/* {error && <div>Informações não conferem.</div>} */}
         <div>
@@ -45,7 +46,7 @@ export function Login(props) {
           />
         </div>
         <button onClick={handleLogin}>Entrar</button>
-      </form>
+      </div>
     </div>
   );
 }

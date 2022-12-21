@@ -2,7 +2,10 @@ import Header from "../../components/Header/Header";
 import { Main } from "../../components/Main";
 import "./App.css";
 
-function App(props) {
+export function App(props) {
+  if (!props.user) {
+    props.setUser(localStorage.getItem("User"));
+  }
   return (
     <div className="App">
       <Header user={props.user} />
@@ -10,5 +13,3 @@ function App(props) {
     </div>
   );
 }
-
-export default App;
