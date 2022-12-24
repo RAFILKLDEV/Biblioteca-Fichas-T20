@@ -26,22 +26,46 @@ export const Main = () => {
           if (select !== "Todos") {
             if (e.tipo === select) {
               if (search) {
-                if (e.name.toLowerCase().includes(search.toLowerCase())) {
+                if (
+                  e.user.apelido.toLowerCase().includes(search.toLowerCase())
+                ) {
                   return (
-                    <Card key={e.name + i} name={e.name} email={e.email} />
+                    <Card
+                      key={e.user.apelido + i}
+                      name={e.user.apelido}
+                      email={e.user.email}
+                    />
                   );
                 }
               } else
-                return <Card key={e.name + i} name={e.name} email={e.email} />;
+                return (
+                  <Card
+                    key={e.user.apelido + i}
+                    name={e.user.apelido}
+                    email={e.user.email}
+                  />
+                );
             } else return null;
           }
 
           if (search) {
-            if (e.name.toLowerCase().includes(search.toLowerCase())) {
-              return <Card key={e.name + i} name={e.name} email={e.email} />;
+            if (e.user.apelido.toLowerCase().includes(search.toLowerCase())) {
+              return (
+                <Card
+                  key={e.user.apelido + i}
+                  name={e.user.apelido}
+                  email={e.user.email}
+                />
+              );
             }
-          }
-          return null;
+          } else
+            return (
+              <Card
+                key={e.user.apelido + i}
+                name={e.user.apelido}
+                email={e.user.email}
+              />
+            );
         })}
       </section>
     </main>
