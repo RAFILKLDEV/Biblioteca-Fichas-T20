@@ -1,0 +1,81 @@
+.Info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Monster-Bar {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 3px var(--red) solid;
+  align-items: baseline;
+}
+
+.Monster-Bar input {
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  font-size: var(--fontTitle);
+}
+
+.Monster-Bar div {
+  width: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.Monster-Desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+  font-size: var(--font);
+  border-bottom: 3px var(--red) solid;
+}
+
+.Monster-Desc img {
+  width: 250px;
+}
+
+.Monster-Desc-Select {
+  display: flex;
+}
+
+.Monster-Desc-Select select {
+  font-size: var(--font);
+  font-weight: 600;
+  border: none;
+  background-color: inherit;
+}
+
+.Monster-Desc textarea {
+  width: 100%;
+  border: none;
+  background-color: inherit;
+  resize: none;
+  font-size: var(--font);
+  font-weight: 600;
+}
+
+.Monster-Nd {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: var(--fontTitle);
+}
+
+.Monster-Nd button {
+  display: none;
+  background-color: inherit;
+  border: none;
+  font-size: var(--font);
+}
+
+.Monster-Nd:hover button {
+  display: flex;
+}
+
+.Monster-Nd:hover {
+  width: 100px;
+}

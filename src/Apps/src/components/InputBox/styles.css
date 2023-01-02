@@ -1,0 +1,36 @@
+.InputBox {
+  width: 100%;
+}
+
+.InputBox input {
+  display: none;
+  border: none;
+  background-color: inherit;
+  font-weight: 600;
+  font-size: var(--font);
+  width: 100%;
+}
+
+.InputBox textarea {
+  display: none;
+  border: none;
+  background-color: inherit;
+  font-size: var(--font);
+  width: 100%;
+  height: 36px;
+}
+
+.InputBox:hover input {
+  display: block;
+  font-size: var(--font);
+  width: 100%;
+}
+
+.InputBox:hover textarea {
+  display: block;
+  font-size: var(--font);
+}
+
+.InputBox:hover div {
+  display: none;
+}

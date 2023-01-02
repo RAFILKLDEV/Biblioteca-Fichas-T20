@@ -1,13 +1,10 @@
 import Header from "../../components/Header/Header";
 import { Main } from "../../components/Main";
-import "./App.css";
+import "./Home.css";
 
-export function App(props) {
-  if (!props.user) {
-    props.setUser(localStorage.getItem("User"));
-  }
+export function Home(props) {
   return (
-    <div className="App">
+    <div className="Home">
       <Header user={props.user} />
       <Main user={props.user} />
     </div>

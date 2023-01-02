@@ -1,0 +1,33 @@
+.Menu {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font);
+  margin-bottom: 10;
+  width: 100%;
+  align-items: baseline;
+}
+
+.Menu-Bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Menu-Bar button {
+  background-color: inherit;
+  border: none;
+  color: var(--red);
+  font-size: var(--font);
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+
+.Menu-Bar button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.Menu-Children {
+  display: flex;
+  width: 100%;
+}

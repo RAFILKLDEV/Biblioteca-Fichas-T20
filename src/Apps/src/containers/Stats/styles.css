@@ -1,0 +1,27 @@
+.Stats {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.Monster-Stats {
+  display: flex;
+}
+
+.Monster-Defense {
+  display: flex;
+}
+
+.Monster-Hp {
+  display: flex;
+}
+
+.Monster-Extras {
+  display: flex;
+}
+
+.Monster-Speed {
+  padding-bottom: 10px;
+  border-bottom: 3px var(--red) solid;
+}

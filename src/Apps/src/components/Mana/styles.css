@@ -1,0 +1,33 @@
+.ComboLabel {
+  display: flex;
+}
+
+.ComboLabel input {
+  background-color: inherit;
+  border: none;
+  width: 22px;
+  text-align: center;
+  font-size: var(--font);
+}
+
+.ComboLabel input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.ComboLabel-Label {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.ComboLabel-Combo button {
+  display: none;
+}
+
+.ComboLabel:hover .ComboLabel-Combo button {
+  background-color: inherit;
+  border: inherit;
+  font-weight: 600;
+  display: inline-flex;
+  font-size: var(--font);
+}

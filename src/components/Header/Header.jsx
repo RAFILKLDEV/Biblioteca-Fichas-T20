@@ -6,6 +6,10 @@ import "./styles.css";
 const Header = (props) => {
   const [info, setInfo] = useState([]);
 
+  if (!props.user) {
+    props.setUser(localStorage.getItem("User"));
+  }
+
   useEffect(() => {
     getOneUser(setInfo, props.user);
   }, []);
@@ -21,6 +25,8 @@ const Header = (props) => {
           height={30}
         />
       </div>
+      <div className="Header-Title">Npcs</div>
+      <div className="Header-Title">Monstros</div>
       <div className="Header-Title">{info.user?.apelido}</div>
     </div>
   );

@@ -1,0 +1,10 @@
+.Skills {
+  padding-top: 10px
+}
+
+.Monster-Skills {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  border-bottom: 3px var(--red) solid;
+}

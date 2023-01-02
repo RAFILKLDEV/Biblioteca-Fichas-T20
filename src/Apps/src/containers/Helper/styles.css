@@ -1,0 +1,61 @@
+.Helper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+  border: var(--red) solid 3px;
+  padding: 20px;
+  font-size: var(--font);
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 150px 100px
+}
+
+.Helper-Image {
+  display: none;
+  position: absolute;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 5px;
+  top: calc(50vh - (250px / 2));
+  left: calc(50vw - (500px / 2));
+  padding: 50px;
+  border: var(--red) double 10px;
+  width: 500px;
+}
+
+.Helper-ImageBox {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Helper-ImageBox div {
+  align-self: center;
+}
+
+.Helper-Skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.Helper-Extras {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  gap: 5px;
+}
+
+.Tutorial {
+  font-size: var(--font);
+  width: 100%;
+}
+
+.Npc-Helper-Extras:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
