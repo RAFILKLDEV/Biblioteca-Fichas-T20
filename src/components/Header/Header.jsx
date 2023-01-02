@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { getOneUser } from "../../Firebase";
 import "./styles.css";
 
@@ -16,7 +17,7 @@ const Header = (props) => {
 
   return (
     <div className="Header">
-      <div className="Header-Title">
+      <Link className="Header-Title" to={"/home"}>
         Biblioteca T20{" "}
         <img
           src="https://styles.redditmedia.com/t5_18ls5s/styles/communityIcon_mlfvhpke64a51.png?width=256&s=8a96b9eab3ee16a30e33774808a685a79c273180"
@@ -24,9 +25,9 @@ const Header = (props) => {
           width={30}
           height={30}
         />
-      </div>
-      <div className="Header-Title">Npcs</div>
-      <div className="Header-Title">Monstros</div>
+      </Link>
+      <Link className="Header-Title" to={"/npcs"}>Npcs</Link>
+      <Link className="Header-Title" to={"/monster"}>Monster</Link>
       <div className="Header-Title">{info.user?.apelido}</div>
     </div>
   );

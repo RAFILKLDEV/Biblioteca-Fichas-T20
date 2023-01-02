@@ -2,8 +2,9 @@ import React, { createContext, useState } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { Home } from "./pages/Home/Home";
-import "./index.css";
 import { MonsterApp } from "./pages/MonsterApp/MonsterApp";
+import "./index.css";
+import { NotFound } from "./pages/NotFound/NotFound";
 
 export function Routes() {
   const userContext = createContext();
@@ -19,7 +20,11 @@ export function Routes() {
     },
     {
       path: "/monster",
-      element: <MonsterApp user={user} setUser={setUser}/>,
+      element: <MonsterApp user={user} setUser={setUser} />,
+    },
+    {
+      path: "*",
+      element: <NotFound setUser={setUser} />,
     },
   ]);
 

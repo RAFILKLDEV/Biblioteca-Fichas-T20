@@ -1,0 +1,12 @@
+.NotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 83.8vh;
+
+  font-size: 3rem;
+
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
