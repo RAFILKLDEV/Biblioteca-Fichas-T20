@@ -1,0 +1,218 @@
+.App {
+  --red: rgb(150, 0, 0);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: repeat;
+  background-size: contain;
+  gap: 100px;
+}
+
+.Npc-Creator,
+.Npc-Helper {
+  border: var(--red) solid 3px;
+  padding: 20px;
+  font-size: 1.2rem;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Npc-Helper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Npc-Helper-Title {
+  font-weight: 600;
+  height: auto;
+  font-size: 1.1em;
+}
+
+.Npc-Helper-Image {
+  display: none;
+  position: absolute;
+  gap: 5px;
+  top: calc(50vh - (250px / 2));
+  left: calc(50vw - (500px / 2));
+  width: 500px;
+  padding: 25px;
+}
+
+.Npc-Helper-ImageBox {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  background-color: beige;
+  padding: 25px;
+  gap: 25px;
+}
+
+.Npc-Helper-Pericias {
+  display: none;
+  position: absolute;
+  gap: 5px;
+  top: calc(50vh - (500px / 2));
+  left: calc(50vw - (500px / 2));
+  width: 500px;
+  height: 500px;
+}
+
+.Npc-Helper-List {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 500px;
+  background-color: antiquewhite;
+}
+
+.Npc-Info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Npc-Name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  background-color: inherit;
+  border: none;
+}
+
+.Npc-Nd {
+  width: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.Npc-Nd:hover {
+  width: auto;
+}
+
+.Npc-Nd:hover button {
+  display: inline-flex;
+  font-size: 1.4rem;
+}
+
+.Npc-Info button {
+  background-color: inherit;
+  border: inherit;
+  font-weight: 600;
+  display: none;
+  font-size: 1.2rem;
+}
+
+.Npc-Img {
+  border-bottom: var(--red) solid 2px;
+  padding: 10px 0px 10px;
+  min-height: 0px;
+}
+
+.Npc-Img img {
+  min-height: 0px;
+}
+
+.Npc-Attributes {
+  padding: 10px 0px 0px;
+}
+
+.Npc-Attributes-Stats {
+  border-bottom: var(--red) solid 2px;
+  padding: 10px 0px 10px;
+  display: flex;
+}
+
+.Npc-Attributes-Resistencias {
+  border-bottom: var(--red) solid 2px;
+  padding: 10px 0px 10px;
+}
+
+.Npc-Combat {
+  padding: 10px 0px 10px;
+}
+
+.ComboLabel {
+  display: flex;
+}
+
+.ComboLabel input {
+  background-color: inherit;
+  border: none;
+  width: 22px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.ComboLabel input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.ComboLabel-Label {
+  color: var(--red);
+  font-weight: 600;
+}
+
+.ComboLabel-Combo button {
+  display: none;
+}
+
+.ComboLabel:hover .ComboLabel-Combo button {
+  background-color: inherit;
+  border: inherit;
+  font-weight: 600;
+  display: inline-flex;
+  font-size: 1.2rem;
+}
+
+.TextBox {
+  height: 22px;
+  width: 100%;
+  border: inherit;
+  overflow: hidden;
+  resize: none;
+  line-height: 31px;
+  background-color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-size: 1.2rem;
+}
+
+.Tutorial {
+  display: none;
+  position: absolute;
+  top: calc(50vh - (493 / 2));
+  left: calc(50vw - (842 / 2));
+  border: double var(--red) 15px;
+  padding: 5px;
+  background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Guide {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.About {
+  position: absolute;
+  top: calc(50vh - (493 / 2));
+  left: calc(50vw - (842 / 2));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 700px;
+  font-size: 1.2rem;
+  padding: 25px;
+  background-color: rgb(243, 239, 233);
+}
+
+.Teste {
+}
