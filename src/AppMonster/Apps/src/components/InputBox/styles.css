@@ -9,6 +9,7 @@
   font-weight: 600;
   font-size: var(--font);
   width: 100%;
+  font-family: BreatheFire;
 }
 
 .InputBox textarea {

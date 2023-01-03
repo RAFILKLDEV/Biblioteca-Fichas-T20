@@ -21,6 +21,8 @@
   font-weight: 600;
   width: 100%;
   text-align: left;
+  font-family: BreatheFire;
+  color: black;
 }
 
 .Menu-Bar button:hover {

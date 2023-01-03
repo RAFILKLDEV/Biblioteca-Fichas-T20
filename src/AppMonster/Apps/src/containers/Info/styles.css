@@ -17,6 +17,7 @@
   background-color: inherit;
   border: none;
   font-size: var(--fontTitle);
+  font-family: BreatheFire;
 }
 
 .Monster-Bar div {
@@ -45,6 +46,7 @@
   font-size: var(--font);
   border: none;
   background-color: inherit;
+  font-family: BreatheFire;
 }
 
 .Monster-Desc textarea {
@@ -54,6 +56,7 @@
   resize: none;
   font-size: var(--font);
   font-weight: 600;
+  font-family: BreatheFire;
 }
 
 .Monster-Nd {

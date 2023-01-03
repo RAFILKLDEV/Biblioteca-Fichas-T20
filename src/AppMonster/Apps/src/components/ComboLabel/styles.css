@@ -8,6 +8,7 @@
   width: 22px;
   text-align: center;
   font-size: var(--font);
+  font-family: BreatheFire;
 }
 
 .ComboLabel input::-webkit-inner-spin-button {
