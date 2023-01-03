@@ -5,6 +5,7 @@ import { Home } from "./pages/Home/Home";
 import { MonsterApp } from "./pages/MonsterApp/MonsterApp";
 import "./index.css";
 import { NotFound } from "./pages/NotFound/NotFound";
+import { NpcApp } from "./pages/NpcApp/NpcApp";
 
 export function Routes() {
   const userContext = createContext();
@@ -21,6 +22,10 @@ export function Routes() {
     {
       path: "/monster",
       element: <MonsterApp user={user} setUser={setUser} />,
+    },
+    {
+      path: "/npc",
+      element: <NpcApp user={user} setUser={setUser}/>,
     },
     {
       path: "*",

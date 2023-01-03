@@ -1,11 +1,11 @@
-import AppMonster from "../../AppMonster/Apps/src/App";
+import AppNpc from "../../AppNpcs/src/AppNpc";
 import Header from "../../components/Header/Header";
 
-export function MonsterApp(props) {
+export function NpcApp(props) {
   return (
     <>
       <Header user={props.user} setUser={props.setUser} />
-      <AppMonster/>
+      <AppNpc />
     </>
   );
 }

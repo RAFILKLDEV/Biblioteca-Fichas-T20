@@ -7,9 +7,9 @@ import Info from "./components/Info/Info";
 import Pericias from "./components/Pericias/Pericias";
 import NpcContext from "./contexts/npcContext";
 import html2canvas from "html2canvas";
-import "./App.css";
+import "./AppNpc.css";
 
-function App() {
+function AppNpc() {
   const [nd, setNd] = useState(0);
   const [image, setImage] = useState("");
   const [pericias, setPericias] = useState([
@@ -289,4 +289,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppNpc;

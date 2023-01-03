@@ -8,7 +8,7 @@ export function NotFound(props) {
       <div className="NotFound">
         Lamentamos o ocorrido, mas ...
         <br/>
-        O Biblotecário não encontrou essa referencia.
+        O Bibliotecário não encontrou essa referência.
       </div>
     </>
   );

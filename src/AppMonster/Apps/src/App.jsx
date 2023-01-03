@@ -7,7 +7,7 @@ import { Combat } from "./containers/Combat/Combat";
 import { Helper } from "./containers/Helper/Helper";
 import "./App.css";
 
-function App() {
+function AppMonster() {
   const [nd, setNd] = useState(0);
   const [image, setImage] = useState("");
   const [saveInfo, setSaveInfo] = useState({
@@ -111,4 +111,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppMonster;
