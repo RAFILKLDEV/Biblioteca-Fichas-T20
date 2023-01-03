@@ -33,7 +33,22 @@ export function Register() {
       });
   }
 
-  function errorMessage(msg) {}
+  function testeRegister() {
+    if (apelido.length < 3) {
+      return alert("Apelido precisa ter no minimo 3 Caracteres");
+    }
+    if (password === confirmPassword) {
+      handleRegister();
+      setApelido("")
+      setPassword("")
+      setConfirmPassowrd("")
+    } else {
+      setPassword("");
+      setConfirmPassowrd("");
+      alert("Senhas não conferem");
+      return setConfirmPassowrd("");
+    }
+  }
 
   return (
     <div className="Register">
@@ -77,7 +92,7 @@ export function Register() {
             autoComplete="on"
           />
         </div>
-        <button onClick={handleRegister}>Registrar</button>
+        <button onClick={testeRegister}>Registrar</button>
       </div>
     </div>
   );
