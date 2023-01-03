@@ -27,6 +27,12 @@ const ComboPericia = (props) => {
           type="number"
           value={extra}
           onChange={(e) => setExtra(e.target.value)}
+          onFocus={() => {
+            document.body.style.overflow = "hidden";
+          }}
+          onBlur={() => {
+            document.body.style.overflow = "auto";
+          }}
         />
       </div>
     </div>

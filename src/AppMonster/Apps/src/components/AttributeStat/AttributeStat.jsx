@@ -55,6 +55,12 @@ const AttributeStat = (props) => {
           }
           setValor(e.target.value);
         }}
+        onFocus={() => {
+          document.body.style.overflow = "hidden";
+        }}
+        onBlur={() => {
+          document.body.style.overflow = "auto";
+        }}
         value={valor}
       ></input>
     </div>

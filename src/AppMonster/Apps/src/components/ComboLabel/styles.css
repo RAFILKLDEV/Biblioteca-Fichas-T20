@@ -15,11 +15,6 @@
   margin: 0;
 }
 
-.ComboLabel-Label {
-  color: var(--red);
-  font-weight: 600;
-}
-
 .ComboLabel-Combo {
   display: none;
   align-items: center;
@@ -32,7 +27,6 @@
 .ComboLabel:hover .ComboLabel-Combo button {
   background-color: inherit;
   border: inherit;
-  font-weight: 600;
   display: inline-flex;
   font-size: var(--font)
 }

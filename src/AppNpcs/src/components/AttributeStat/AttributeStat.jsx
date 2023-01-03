@@ -20,6 +20,12 @@ const AttributeStat = (props) => {
           inputRef.current.style.width = `${inputRef.current.scrollWidth}px`;
           setValor(e.target.value);
         }}
+        onFocus={() => {
+          document.body.style.overflow = "hidden";
+        }}
+        onBlur={() => {
+          document.body.style.overflow = "auto";
+        }}
         value={valor}
       ></input>
     </div>

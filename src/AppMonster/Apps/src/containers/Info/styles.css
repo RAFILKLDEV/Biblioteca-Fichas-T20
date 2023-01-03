@@ -22,7 +22,6 @@
 .Monster-Bar div {
   width: 30px;
   text-align: center;
-  font-weight: 600;
 }
 
 .Monster-Desc {
@@ -44,7 +43,6 @@
 
 .Monster-Desc-Select select {
   font-size: var(--font);
-  font-weight: 600;
   border: none;
   background-color: inherit;
 }

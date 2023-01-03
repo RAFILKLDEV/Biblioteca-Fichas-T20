@@ -53,6 +53,12 @@ const ComboLabel = (props) => {
             setInput(e.target.value);
           }}
           value={result}
+          onFocus={() => {
+            document.body.style.overflow = "hidden";
+          }}
+          onBlur={() => {
+            document.body.style.overflow = "auto";
+          }}
         ></input>
         <button onClick={incrementar}>
           <i className="fa fa-arrow-right" aria-hidden="true"></i>

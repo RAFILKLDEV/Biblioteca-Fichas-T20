@@ -51,6 +51,12 @@ const ComboLabel = (props) => {
             inputRef.current.style.width = `${inputRef.current.scrollWidth}px`;
             setInput(e.target.value);
           }}
+          onFocus={() => {
+            document.body.style.overflow = "hidden";
+          }}
+          onBlur={() => {
+            document.body.style.overflow = "auto";
+          }}
           value={result}
         ></input>
         <button onClick={incrementar}>
