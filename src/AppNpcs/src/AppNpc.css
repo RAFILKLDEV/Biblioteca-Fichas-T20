@@ -1,14 +1,16 @@
-.App {
+.App-Npc-Creator {
   --red: rgb(150, 0, 0);
   min-height: 100vh;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
   background-repeat: repeat;
   background-size: contain;
-  gap: 100px;
+}
+
+.Npc {
+  display: flex;
+  max-height: 650px;
 }
 
 .Npc-Creator,
@@ -19,6 +21,8 @@
   background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
   background-repeat: no-repeat;
   background-size: cover;
+  margin-left: 100px;
+  margin-top: 100px;
 }
 
 .Npc-Helper {

@@ -79,7 +79,7 @@ function AppMonster() {
   });
 
   return (
-    <div className="App">
+    <div className="App-Monster-Creator">
       <Helper
         pericias={pericias}
         setPericias={setPericias}
