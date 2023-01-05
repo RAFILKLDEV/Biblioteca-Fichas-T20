@@ -7,10 +7,12 @@
 
 .Monster-Stats {
   display: flex;
+  height: 22.8px;
 }
 
 .Monster-Defense {
   display: flex;
+  align-items: center;
 }
 
 .Monster-Hp {

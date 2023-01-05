@@ -2,6 +2,11 @@
   display: flex;
 }
 
+.ComboLabel-Label {
+  color: var(--red);
+  font-weight: 600;
+}
+
 .ComboLabel input {
   background-color: inherit;
   border: none;
@@ -11,14 +16,13 @@
   font-family: BreatheFire;
 }
 
+.ComboLabel-Combo {
+  display: flex;
+}
+
 .ComboLabel input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
-}
-
-.ComboLabel-Combo {
-  display: none;
-  align-items: center;
 }
 
 .ComboLabel-Combo button {
@@ -29,5 +33,5 @@
   background-color: inherit;
   border: inherit;
   display: inline-flex;
-  font-size: var(--font)
+  font-size: var(--font);
 }

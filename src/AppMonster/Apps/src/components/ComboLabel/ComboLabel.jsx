@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useRef, useState } from "react";
-import "./styles.css";
 import { tabela } from "../../constants";
+import "./styles.css";
 
 const ComboLabel = (props) => {
   const [valor, setValor] = useState(0);

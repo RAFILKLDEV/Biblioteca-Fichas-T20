@@ -1,42 +1,5 @@
-.ComboLabel {
-  display: flex;
-}
-
-.ComboLabel input {
-  background-color: inherit;
-  border: none;
-  width: 22px;
-  text-align: center;
-  font-size: var(--font);
-}
-
-.ComboLabel input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-.ComboLabel-Label {
-  color: var(--red);
-  font-weight: 600;
-}
-
-.ComboLabel-Combo {
-  display: flex;
-}
-
-.ComboLabel-Combo button {
-  display: none;
-}
-
-.ComboLabel:hover .ComboLabel-Combo button {
-  background-color: inherit;
-  border: inherit;
-  font-weight: 600;
-}
-
 .ComboLabel:hover .ComboSavingThrow {
   display: block;
-  font-size: var(--font);
 }
 
 .ComboSavingThrow {

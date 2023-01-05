@@ -17,7 +17,7 @@
 .Npc-Helper {
   border: var(--red) solid 3px;
   padding: 20px;
-  font-size: 1.2rem;
+  font-size: var(--font);
   background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
   background-repeat: no-repeat;
   background-size: cover;
@@ -135,40 +135,6 @@
 
 .Npc-Combat {
   padding: 10px 0px 10px;
-}
-
-.ComboLabel {
-  display: flex;
-}
-
-.ComboLabel input {
-  background-color: inherit;
-  border: none;
-  width: 22px;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.ComboLabel input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
-}
-
-.ComboLabel-Label {
-  color: var(--red);
-  font-weight: 600;
-}
-
-.ComboLabel-Combo button {
-  display: none;
-}
-
-.ComboLabel:hover .ComboLabel-Combo button {
-  background-color: inherit;
-  border: inherit;
-  font-weight: 600;
-  display: inline-flex;
-  font-size: 1.2rem;
 }
 
 .TextBox {

@@ -1,7 +1,7 @@
 body {
   --red: rgb(150, 0, 0);
-  --font: 1rem;
-  --fontTitle: 1.1rem;
+  --font: 18px;
+  --fontTitle: 20px;
 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

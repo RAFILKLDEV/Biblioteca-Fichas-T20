@@ -2,12 +2,14 @@
   display: inline-flex;
 }
 
-.ComboLabel-Input {
+.ComboPericia-Input {
   display: flex;
   align-items: baseline;
+  text-align: center;
+  font-size: var(--font);
 }
 
-.ComboLabel-Input div{
+.ComboPericia-Input div {
   width: 20px;
 }
 
@@ -19,6 +21,8 @@
   background-color: inherit;
   text-align: center;
   width: 30px;
+  font-family: BreatheFire;
+  color: gray
 }
 
 .ComboPericia input::-webkit-inner-spin-button {
