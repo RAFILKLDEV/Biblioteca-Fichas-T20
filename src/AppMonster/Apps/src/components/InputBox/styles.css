@@ -1,9 +1,8 @@
-.InputBox {
+.Mst-InputBox {
   width: 100%;
 }
 
-.InputBox input {
-  display: none;
+.Mst-InputBox input {
   border: none;
   background-color: inherit;
   font-weight: 600;
@@ -12,8 +11,7 @@
   font-family: BreatheFire;
 }
 
-.InputBox textarea {
-  display: none;
+.Mst-InputBox textarea {
   border: none;
   background-color: inherit;
   font-size: var(--font);
@@ -21,17 +19,3 @@
   height: 36px;
 }
 
-.InputBox:hover input {
-  display: block;
-  font-size: var(--font);
-  width: 100%;
-}
-
-.InputBox:hover textarea {
-  display: block;
-  font-size: var(--font);
-}
-
-.InputBox:hover div {
-  display: none;
-}

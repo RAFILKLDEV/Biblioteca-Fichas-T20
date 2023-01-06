@@ -10,12 +10,14 @@ const TrainedSkills = (props) => {
     return props.setPericias(values);
   };
 
+  console.log("kek");
+
   return (
     <div
       style={{
         display: "flex",
         justifyContent: "space-between",
-        padding: 10,
+        padding: 5,
         width: "auto",
       }}
     >

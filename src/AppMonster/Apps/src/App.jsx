@@ -87,25 +87,24 @@ function AppMonster() {
         setExtras={setExtras}
         setImage={setImage}
       />
-      <div id="Monster">
-        <div className="Monster-Creator" ref={monster}>
-          <Info
-            nd={nd}
-            setNd={setNd}
-            image={image}
-            salvar={{ saveInfo, setSaveInfo }}
-          />
-          <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
-          <Attribute att={att} setAtt={setAtt} />
-          <Skills
-            salvar={{ saveInfo, setSaveInfo }}
-            nd={nd}
-            att={att}
-            pericias={pericias}
-          />
-          <Combat extras={extras} nd={nd} />
-          <div className="Extras"></div>
-        </div>
+
+      <div className="Monster-Creator" id="MonsterCreator" ref={monster}>
+        <Info
+          nd={nd}
+          setNd={setNd}
+          image={image}
+          salvar={{ saveInfo, setSaveInfo }}
+        />
+        <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
+        <Attribute att={att} setAtt={setAtt} />
+        <Skills
+          salvar={{ saveInfo, setSaveInfo }}
+          nd={nd}
+          att={att}
+          pericias={pericias}
+        />
+        <Combat extras={extras} nd={nd} />
+        <div className="Extras"></div>
       </div>
     </div>
   );

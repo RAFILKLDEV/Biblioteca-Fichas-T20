@@ -64,7 +64,7 @@ export function Helper(props) {
         </Menu>
         <Menu name="Pericias">
           <div className="Helper-Skills">
-            {props.pericias.map((e) => {
+            {props.pericias.map((e, i) => {
               if (e.name === null) {
                 return null;
               } else {
@@ -72,7 +72,7 @@ export function Helper(props) {
                   <TrainedSkills
                     name={e.name}
                     pericias={props.pericias}
-                    key={e.name}
+                    key={e.name + i}
                     setPericias={props.setPericias}
                   />
                 );
@@ -113,7 +113,7 @@ export function Helper(props) {
           <div className="Npc-Helper">
             <button
               onClick={() => {
-                html2canvas(document.getElementById("Monster"), {
+                html2canvas(document.getElementById("MonsterCreator"), {
                   allowTaint: true,
                 }).then(function (canvas) {
                   let html = window.open("", "Imagem de Ficha");

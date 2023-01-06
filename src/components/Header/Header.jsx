@@ -26,8 +26,12 @@ const Header = (props) => {
           height={30}
         />
       </Link>
-      <Link className="Header-Title" to={"/npc"}>Npcs</Link>
-      <Link className="Header-Title" to={"/monster"}>Monster</Link>
+      <Link className="Header-Title" to={"/npc"}>
+        Npcs
+      </Link>
+      <Link className="Header-Title" to={"/monster"}>
+        Monster
+      </Link>
       <div className="Header-Title">{info.user?.apelido}</div>
     </div>
   );

@@ -48,7 +48,7 @@ const AttributeStat = (props) => {
         ref={inputRef}
         type="number"
         onChange={(e) => {
-          inputRef.current.style.width = "18px";
+          inputRef.current.style.width = "22px";
           inputRef.current.style.width = `${inputRef.current.scrollWidth - 1}px`;
           if (e.target.value > 99) {
             e.target.value = 99;
