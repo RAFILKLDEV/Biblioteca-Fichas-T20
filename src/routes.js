@@ -9,6 +9,7 @@ import { NpcApp } from "./pages/NpcApp/NpcApp";
 
 export function Routes() {
   const userContext = createContext();
+  const [saveMonster, setSaveMonster] = useState({})
   const [user, setUser] = useState("");
   const router = createBrowserRouter([
     {
@@ -21,7 +22,7 @@ export function Routes() {
     },
     {
       path: "/monster",
-      element: <MonsterApp user={user} setUser={setUser} />,
+      element: <MonsterApp user={user} setUser={setUser} save={setSaveMonster} />,
     },
     {
       path: "/npc",

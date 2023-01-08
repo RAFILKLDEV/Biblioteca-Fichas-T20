@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
 
 const TrainedSkills = (props) => {
+  const [checkbox, setCheckbox] = useState(false)
   const trained = () => {
     const values = [...props.pericias];
 
@@ -10,7 +12,10 @@ const TrainedSkills = (props) => {
     return props.setPericias(values);
   };
 
-  console.log("kek");
+  useEffect(() => {
+    const values = [...props.pericias]
+    setCheckbox(values[values.findIndex((e) => e.name === props.name)].trained)
+  })
 
   return (
     <div
@@ -22,7 +27,7 @@ const TrainedSkills = (props) => {
       }}
     >
       <span className="ComboLabel-Label">{props.name}</span>
-      <input onChange={trained} type="checkbox" />
+      <input onChange={trained} type="checkbox" checked={checkbox}/>
     </div>
   );
 };
