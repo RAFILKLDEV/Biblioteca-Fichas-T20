@@ -26,7 +26,7 @@ const Combat = (props) => {
       <div
         style={{
           display: "inline-flex",
-          borderBottom: "var(--red) solid 2px;",
+          borderBottom: "var(--red) solid 2px",
         }}
       >
         <Attack nd={props.nd} />

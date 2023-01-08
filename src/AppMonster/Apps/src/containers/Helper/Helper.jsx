@@ -85,7 +85,7 @@ export function Helper(props) {
             {props.extras.map((e, i) => (
               <Extras
                 name={e.name}
-                key={e.name}
+                key={e.name + i}
                 extras={props.extras}
                 setExtras={props.setExtras}
                 number={e.number}
@@ -102,7 +102,7 @@ export function Helper(props) {
                 return null;
               } else
                 return (
-                  <div>
+                  <div key={e}>
                     {e.name}: {e.valor}
                   </div>
                 );

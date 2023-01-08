@@ -1,4 +1,5 @@
 import { signInWithEmailAndPassword } from "@firebase/auth";
+import { async } from "@firebase/util";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { auth } from "../../Firebase";
@@ -13,8 +14,11 @@ export function Login(props) {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
-        props.setUser(userCredential.user.uid);
-        localStorage.setItem("User", userCredential.user.uid);
+        async function get() {
+          await props.setUser(userCredential.user.uid);
+          localStorage.setItem("User", userCredential.user.uid);
+        }
+        get();
         navigate("/home");
         // ...
       })
