@@ -11,7 +11,6 @@ function AppMonster() {
   const [nd, setNd] = useState(0);
   const [image, setImage] = useState("");
   const [saveInfo, setSaveInfo] = useState({
-    usuario: {},
     monster: {},
   });
   const monster = useRef();
@@ -58,6 +57,14 @@ function AppMonster() {
     { name: "Tesouros", marked: false, number: null },
   ]);
 
+  function saving(valor) {
+    const values = { ...saveInfo };
+    values.monster = valor;
+    setSaveInfo(values);
+  }
+
+  console.log(saveInfo);
+
   useEffect(() => {
     let filhos = monster.current.children;
     let altura = 20;
@@ -89,12 +96,7 @@ function AppMonster() {
       />
 
       <div className="Monster-Creator" id="MonsterCreator" ref={monster}>
-        <Info
-          nd={nd}
-          setNd={setNd}
-          image={image}
-          salvar={{ saveInfo, setSaveInfo }}
-        />
+        <Info nd={nd} setNd={setNd} image={image} salvar={saving} />
         <Stats nd={nd} att={att} pericias={pericias} extras={extras} />
         <Attribute att={att} setAtt={setAtt} />
         <Skills

@@ -18,6 +18,18 @@
   font-size: 1.8rem;
 }
 
+.Header-Logout {
+  display: none;
+}
+
+.Header-Title:hover .Header-Login {
+  display: none;
+}
+
+.Header-Title:hover .Header-Logout {
+  display: block;
+}
+
 a:visited {
   color: inherit;
 }

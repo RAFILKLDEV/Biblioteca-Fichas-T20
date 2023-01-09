@@ -1,10 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { getOneUser } from "../../Firebase";
 import "./styles.css";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [info, setInfo] = useState({});
 
   useEffect(() => {
@@ -28,7 +29,18 @@ const Header = () => {
       <Link className="Header-Title" to={"/monster"}>
         Monster
       </Link>
-      <div className="Header-Title">{info.user?.apelido}</div>
+      <div className="Header-Title">
+        <div className="Header-Login">{info.user?.apelido}</div>
+        <div
+          onClick={() => {
+            localStorage.clear();
+            navigate("/");
+          }}
+          className="Header-Logout"
+        >
+          Sair
+        </div>
+      </div>
     </div>
   );
 };

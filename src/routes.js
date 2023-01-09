@@ -9,7 +9,6 @@ import { T20Provider } from "./context/context";
 import "./index.css";
 
 export function Routes() {
-  // const [saveMonster, setSaveMonster] = useState({});
   const router = createBrowserRouter([
     {
       path: "/",
