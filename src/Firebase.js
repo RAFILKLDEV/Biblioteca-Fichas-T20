@@ -36,8 +36,13 @@ export const getUsers = async (setUser) => {
 
 // Receber Informações do Usuário do Firebase Store
 export const getOneUser = async (setUser, id) => {
-  const data = await getDoc(doc(dataBase, "users", id));
-  setUser(data.data());
+  const user = doc(dataBase, "users", id);
+  try {
+    const data = await getDoc(user);
+    setUser(data.data());
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // Registrar Informações do Usuário no Firebase Store

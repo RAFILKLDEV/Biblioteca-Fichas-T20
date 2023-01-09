@@ -1,13 +1,14 @@
 import { signInWithEmailAndPassword } from "@firebase/auth";
-import { async } from "@firebase/util";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
+import { T20Context } from "../../context/context";
 import { auth } from "../../Firebase";
 import "./styles.css";
 
-export function Login(props) {
+export function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { setUser } = useContext(T20Context);
   const navigate = useNavigate();
 
   function handleLogin() {
@@ -15,7 +16,7 @@ export function Login(props) {
       .then((userCredential) => {
         // Signed in
         async function get() {
-          await props.setUser(userCredential.user.uid);
+          await setUser({ id: userCredential.user.uid });
           localStorage.setItem("User", userCredential.user.uid);
         }
         get();

@@ -39,9 +39,9 @@ export function Register() {
     }
     if (password === confirmPassword) {
       handleRegister();
-      setApelido("")
-      setPassword("")
-      setConfirmPassowrd("")
+      setApelido("");
+      setPassword("");
+      setConfirmPassowrd("");
     } else {
       setPassword("");
       setConfirmPassowrd("");

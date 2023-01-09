@@ -4,15 +4,11 @@ import { Link } from "react-router-dom";
 import { getOneUser } from "../../Firebase";
 import "./styles.css";
 
-const Header = (props) => {
-  const [info, setInfo] = useState([]);
-
-  if (!props.user) {
-    props.setUser(localStorage.getItem("User"));
-  }
+const Header = () => {
+  const [info, setInfo] = useState({});
 
   useEffect(() => {
-    getOneUser(setInfo, props.user);
+    getOneUser(setInfo, localStorage.getItem("User"));
   }, []);
 
   return (

@@ -1,42 +1,41 @@
-import React, { createContext, useState } from "react";
+import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { Home } from "./pages/Home/Home";
 import { MonsterApp } from "./pages/MonsterApp/MonsterApp";
-import "./index.css";
 import { NotFound } from "./pages/NotFound/NotFound";
 import { NpcApp } from "./pages/NpcApp/NpcApp";
+import { T20Provider } from "./context/context";
+import "./index.css";
 
 export function Routes() {
-  const userContext = createContext();
-  const [saveMonster, setSaveMonster] = useState({})
-  const [user, setUser] = useState("");
+  // const [saveMonster, setSaveMonster] = useState({});
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <LoginPage setUser={setUser} />,
+      element: <LoginPage />,
     },
     {
       path: "/home",
-      element: <Home user={user} setUser={setUser} />,
+      element: <Home />,
     },
     {
       path: "/monster",
-      element: <MonsterApp user={user} setUser={setUser} save={setSaveMonster} />,
+      element: <MonsterApp />,
     },
     {
       path: "/npc",
-      element: <NpcApp user={user} setUser={setUser}/>,
+      element: <NpcApp />,
     },
     {
       path: "*",
-      element: <NotFound setUser={setUser} />,
+      element: <NotFound />,
     },
   ]);
 
   return (
-    <userContext.Provider value={(user, setUser)}>
-      <RouterProvider router={router} user={{ user, setUser }} />
-    </userContext.Provider>
+    <T20Provider>
+      <RouterProvider router={router} />;
+    </T20Provider>
   );
 }
