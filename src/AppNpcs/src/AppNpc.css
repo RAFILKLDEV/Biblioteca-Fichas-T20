@@ -150,11 +150,11 @@
   font-size: 1.2rem;
 }
 
-.Tutorial {
+.Npc-Tutorial {
   display: none;
   position: absolute;
-  top: calc(50vh - (493 / 2));
-  left: calc(50vw - (842 / 2));
+  top: calc(50vh - (493px / 2));
+  left: calc(50vw - (842px / 2));
   border: double var(--red) 15px;
   padding: 5px;
   background-image: url(https://img.freepik.com/free-photo/white-texture_1160-786.jpg?w=2000);
@@ -182,7 +182,4 @@
   font-size: 1.2rem;
   padding: 25px;
   background-color: rgb(243, 239, 233);
-}
-
-.Teste {
 }

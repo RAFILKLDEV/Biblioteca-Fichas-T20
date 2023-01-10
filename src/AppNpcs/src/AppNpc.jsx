@@ -59,7 +59,7 @@ function AppNpc() {
   return (
     <div className="App-Npc-Creator">
       <div className="Npc">
-        <div className="About" ref={tabAbout}>
+        {/* <div className="About" ref={tabAbout}>
           <h1>Seja bem vindo ao Criador de NPC T20</h1>
           <div>
             Essa ferramenta foi desenvolvida para Solucionar problemas de
@@ -87,8 +87,8 @@ function AppNpc() {
           >
             Continuar
           </button>
-        </div>
-        <div className="Tutorial" ref={tabTutorial}>
+        </div> */}
+        <div className="Npc-Tutorial" ref={tabTutorial}>
           <div className="Guide">
             <h2>
               As regras de criação são baseadas na tabela do{" "}
@@ -143,10 +143,10 @@ function AppNpc() {
                 </ul>
               </ul>
             </ul>
-            <h5>
+            <h3>
               Ao gerar a imagem em uma nova janela basta clicar com o botão
               direto e selecionar <b>Salvar Imagem como...</b>
-            </h5>
+            </h3>
             <button
               onClick={() => {
                 tabTutorial.current.style.display = "none";

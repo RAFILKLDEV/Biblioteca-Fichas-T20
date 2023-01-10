@@ -63,8 +63,6 @@ function AppMonster() {
     setSaveInfo(values);
   }
 
-  console.log(saveInfo);
-
   useEffect(() => {
     let filhos = monster.current.children;
     let altura = 20;
@@ -109,7 +107,7 @@ function AppMonster() {
         <div className="Extras"></div>
       </div>
     </div>
-  );
+  )
 }
 
 export default AppMonster;

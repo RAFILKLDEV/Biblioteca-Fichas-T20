@@ -34,7 +34,7 @@ export function Routes() {
 
   return (
     <T20Provider>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </T20Provider>
   );
 }

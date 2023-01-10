@@ -5,7 +5,7 @@ export function MonsterApp(props) {
   return (
     <>
       <Header user={props.user} setUser={props.setUser} />
-      <AppMonster save={props.save}/>
+      <AppMonster save={props.save} />
     </>
-  );
+  )
 }
