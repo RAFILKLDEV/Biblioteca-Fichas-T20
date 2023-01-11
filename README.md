@@ -30,7 +30,7 @@
 - [X] Renderizar imagens salvas no Firebase Store
 - [ ] Renderizar Cards com Imagens de Fichas salvas no Firebase Storage.
 
-#### Tarefas Back-End
+### Tarefas Back-End
 
 - [X] Adicionar Firebase 
 - [X] Configurar Firebase 
