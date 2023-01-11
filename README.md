@@ -47,5 +47,5 @@
 
 ### Deploy
 
-https://bibliotecat20.netlify.app/
+https://bibt20.netlify.app/
 
