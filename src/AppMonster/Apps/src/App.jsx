@@ -107,7 +107,7 @@ function AppMonster() {
         <div className="Extras"></div>
       </div>
     </div>
-  )
+  );
 }
 
 export default AppMonster;

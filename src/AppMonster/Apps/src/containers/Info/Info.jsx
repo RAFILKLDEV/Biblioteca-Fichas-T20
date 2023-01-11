@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { T20Context } from "../../../../../context/context";
 import { tabela } from "../../constants";
 import "./styles.css";
 
@@ -21,6 +22,12 @@ export function Info(props) {
     }
     props.setNd(props.nd - 1);
   };
+
+  const { setInfoSave } = useContext(T20Context);
+
+  useEffect(() => {
+    setInfoSave({ name: name, desc: desc, especie: especie, tipo: tipo });
+  }, [desc, especie, name, setInfoSave, tipo]);
 
   return (
     <div className="Info">

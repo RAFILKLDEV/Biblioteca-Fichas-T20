@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import Mana from "../../components/Mana/Mana";
 import ComboLabel from "../../components/ComboLabel/ComboLabel";
 import ComboPericia from "../../components/ComboPericia/ComboPericia";
 import Speed from "../../components/Speed/Speed";
 import ComboSavingThrow from "../../components/ComboSavingThrow/ComboSavingThrow";
+import { T20Context } from "../../../../../context/context";
 import "./styles.css";
 
 export function Stats(props) {
+  const { setStatsSave } = useContext(T20Context);
+
+  useEffect(() => {
+    setStatsSave({});
+  }, []);
+
   return (
     <div className="Stats">
       {/* // 0 Indice 1 B.ATA 2 Dano.M 3 Defesa 4 R.FORTE 5 R.MEDIA 6 R.FRACA 7 PV 8 CD */}

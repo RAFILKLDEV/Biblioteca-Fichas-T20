@@ -10,6 +10,7 @@ export function Helper(props) {
   const tabImage = useRef();
   const tabTutorial = useRef();
   const tabImageBox = useRef();
+  const checkBoxDb = useRef();
 
   return (
     <div className="HelperApp">
@@ -110,7 +111,7 @@ export function Helper(props) {
           </div>
         </Menu>
         <Menu name="Gerar Ficha">
-          <div className="Npc-Helper">
+          <div>
             <button
               onClick={() => {
                 html2canvas(document.getElementById("MonsterCreator"), {
@@ -118,11 +119,17 @@ export function Helper(props) {
                 }).then(function (canvas) {
                   let html = window.open("", "Imagem de Ficha");
                   html.document.body.appendChild(canvas);
+                  if (checkBoxDb.current.checked) {
+                  }
                 });
               }}
             >
               Criar Png
             </button>
+            <div>
+              Salvar no Banco
+              <input type="checkbox" ref={checkBoxDb} />
+            </div>
           </div>
         </Menu>
       </div>
