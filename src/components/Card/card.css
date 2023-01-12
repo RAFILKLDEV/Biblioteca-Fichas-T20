@@ -1,11 +1,9 @@
 .main__card {
-  width: 200px;
-  height: 300px;
   background-color: brown;
+  padding: 20px;
 }
 
 .card__image {
-  height: 70%;
   background-color: chocolate;
 }
 

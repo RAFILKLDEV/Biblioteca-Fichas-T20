@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
 import {
   collection,
   deleteDoc,
@@ -23,6 +24,7 @@ const firebaseConfig = {
 const firebase = initializeApp(firebaseConfig);
 
 export const dataBase = getFirestore(firebase);
+export const storage = getStorage(firebase);
 export const userCollectionRef = collection(dataBase, "users");
 
 // Auth Firebase

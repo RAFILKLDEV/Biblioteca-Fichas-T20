@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { getDownloadURL, ref } from "firebase/storage";
 import { useEffect, useState } from "react";
-import { getUsers } from "../../Firebase";
+import { getUsers, storage } from "../../Firebase";
 import Card from "../Card";
 import { Search } from "../Search/Search";
 import "./main.css";
@@ -10,9 +11,19 @@ export const Main = () => {
   const [search, setSearch] = useState("");
   const [mode, setMode] = useState("Npcs");
   const [select, setSelect] = useState("Todos");
+  const [img, setImg] = useState("");
+
+  function gerarImg() {
+    console.log(ref(storage, "Fichas/squirtle.jpg"));
+    getDownloadURL(ref(storage, "Fichas/squirtle.jpg")).then((url) => {
+      setImg(url);
+      console.log(url)
+    });
+  }
 
   useEffect(() => {
     getUsers(setUser);
+    gerarImg();
   }, []);
 
   return (
@@ -21,7 +32,14 @@ export const Main = () => {
         bars={{ mode, setMode, select, setSelect }}
         search={{ search, setSearch }}
       />
-      <section className={"main__cartas"}>
+      <section className="main__cartas">
+        <h1>Usuarios Cadastrados: {user.length}</h1>
+      </section>
+      <section className="main__cartas">
+        <h1>Fichas</h1>
+        <img src={img} alt="squirtle" />
+      </section>
+      {/* <section className={"main__cartas"}>
         {user.map((e, i) => {
           if (select !== "Todos") {
             if (e.tipo === select) {
@@ -67,7 +85,7 @@ export const Main = () => {
               />
             );
         })}
-      </section>
+      </section> */}
     </main>
   );
 };
