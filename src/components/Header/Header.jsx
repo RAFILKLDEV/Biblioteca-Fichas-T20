@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getOneUser } from "../../Firebase";
 import "./styles.css";
 
-const Header = () => {
+export const Header = () => {
   const navigate = useNavigate();
   const [info, setInfo] = useState({});
 
@@ -29,6 +29,9 @@ const Header = () => {
       <Link className="Header-Title" to={"/monster"}>
         Monster
       </Link>
+      <Link className="Header-Title" to={"/sheets"}>
+        Fichas
+      </Link>
       <div className="Header-Title">
         <div className="Header-Login">{info.user?.apelido}</div>
         <div
@@ -44,5 +47,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

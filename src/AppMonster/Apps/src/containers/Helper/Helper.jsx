@@ -1,5 +1,6 @@
 import html2canvas from "html2canvas";
 import React, { useRef } from "react";
+import { regSheet } from "../../../../../Firebase";
 import Extras from "../../components/Extras/Extras";
 import { Menu } from "../../components/Menu/Menu";
 import TrainedSkills from "../../components/TrainedSkills/TrainedSkills";
@@ -119,8 +120,6 @@ export function Helper(props) {
                 }).then(function (canvas) {
                   let html = window.open("", "Imagem de Ficha");
                   html.document.body.appendChild(canvas);
-                  if (checkBoxDb.current.checked) {
-                  }
                 });
               }}
             >

@@ -7,6 +7,7 @@ import { NotFound } from "./pages/NotFound/NotFound";
 import { NpcApp } from "./pages/NpcApp/NpcApp";
 import { T20Provider } from "./context/context";
 import "./index.css";
+import { Sheets } from "./pages/Sheets/Sheets";
 
 export function Routes() {
   const router = createBrowserRouter([
@@ -25,6 +26,10 @@ export function Routes() {
     {
       path: "/npc",
       element: <NpcApp />,
+    },
+    {
+      path: "/sheets",
+      element: <Sheets />,
     },
     {
       path: "*",

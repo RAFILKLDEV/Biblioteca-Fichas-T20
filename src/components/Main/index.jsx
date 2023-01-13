@@ -14,10 +14,9 @@ export const Main = () => {
   const [img, setImg] = useState("");
 
   function gerarImg() {
-    console.log(ref(storage, "Fichas/squirtle.jpg"));
     getDownloadURL(ref(storage, "Fichas/squirtle.jpg")).then((url) => {
       setImg(url);
-      console.log(url)
+      console.log(url);
     });
   }
 
@@ -37,7 +36,11 @@ export const Main = () => {
       </section>
       <section className="main__cartas">
         <h1>Fichas</h1>
-        <img src={img} alt="squirtle" />
+        {user.map((e) => {
+          if (e.sheets?.img) {
+            return <img src={e.sheets?.img} alt="squirtlekkkk" />;
+          }
+        })}
       </section>
       {/* <section className={"main__cartas"}>
         {user.map((e, i) => {

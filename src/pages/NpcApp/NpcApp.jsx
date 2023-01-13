@@ -1,5 +1,5 @@
 import AppNpc from "../../AppNpcs/src/AppNpc";
-import Header from "../../components/Header/Header";
+import { Header } from "../../components/Header/Header";
 
 export function NpcApp(props) {
   return (

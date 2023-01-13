@@ -8,6 +8,7 @@ import {
   getDoc,
   getDocs,
   getFirestore,
+  updateDoc,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -23,6 +24,7 @@ const firebaseConfig = {
 // Incializando o Firebase
 const firebase = initializeApp(firebaseConfig);
 
+// Firebase Serviços
 export const dataBase = getFirestore(firebase);
 export const storage = getStorage(firebase);
 export const userCollectionRef = collection(dataBase, "users");
@@ -36,7 +38,7 @@ export const getUsers = async (setUser) => {
   await setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
 };
 
-// Receber Informações do Usuário do Firebase Store
+// Receber Informações de um Usuário do Firebase Store
 export const getOneUser = async (setUser, id) => {
   const user = doc(dataBase, "users", id);
   try {
@@ -61,4 +63,13 @@ export const deleteUser = async (id) => {
   const userDoc = doc(dataBase, "users", id);
   await deleteDoc(userDoc);
   getUsers();
+};
+
+// Firebase FICHAS
+
+// Registrar Informações da ficha no Usuario
+export const regSheet = async (id, sheet) => {
+  await updateDoc(doc(userCollectionRef, id), {
+    sheet,
+  });
 };
