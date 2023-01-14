@@ -12,3 +12,32 @@
   justify-content: center;
   gap: 30px;
 }
+
+.Sheets-Toggle {
+  display: flex;
+  gap: 100px;
+}
+
+.Sheets-Toggle button {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 5px 20px;
+  background-color: inherit;
+  border: double var(--red) 8px;
+}
+
+.Sheets-Form {
+  display: flex;
+  border: double var(--red) 8px;
+  padding: 50px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Sheets-Label {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  align-items: center;
+}

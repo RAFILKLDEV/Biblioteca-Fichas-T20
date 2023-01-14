@@ -1,12 +1,18 @@
+import { ref, uploadBytesResumable } from "firebase/storage";
 import { useEffect } from "react";
 import { useState } from "react";
 import { Header } from "../../components/Header/Header";
-import { getOneUser } from "../../Firebase";
+import { getOneUser, storage } from "../../Firebase";
 import "./styles.css";
 
 export function Sheets() {
   const [user, setUser] = useState();
   const [toggleList, setToggleList] = useState(false);
+  const [progress, setProgress] = useState(false);
+  const [img, setImg] = useState(null);
+  const [sheet, setSheet] = useState({});
+
+  console.log(sheet);
 
   useEffect(() => {
     getOneUser(setUser, localStorage.getItem("User"));
@@ -29,35 +35,83 @@ export function Sheets() {
     );
   }
 
+  function handleUpload(e) {
+    e.preventDefault();
+
+    const file = e.target[0]?.files[0];
+    if (!file) return;
+
+    const storageRef = ref(storage, `Fichas/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    uploadTask.on(
+      "state_changed",
+      (snapshot) => {
+        const progress =
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        setProgress(progress);
+      },
+      (error) => {
+        alert(error.message);
+      }
+    );
+  }
+
   return (
     <div className="Sheets">
       <Header />
       <div className="Sheets-Main">
         <h1>Fichas de {user?.user.apelido}</h1>
         <div className="Sheets-Toggle">
-          <div>
-            <button
-              onClick={() => {
-                setToggleList(false);
-              }}
-            >
-              Upload Ficha
-            </button>
-            <button
-              onClick={() => {
-                setToggleList(true);
-              }}
-            >
-              Lista
-            </button>
-          </div>
+          <button
+            onClick={() => {
+              setToggleList(false);
+            }}
+          >
+            Upload Ficha
+          </button>
+          <button
+            onClick={() => {
+              setToggleList(true);
+            }}
+          >
+            Lista
+          </button>
         </div>
         {toggleList ? (
           <div className="Sheets-List">
             <List user={user} />
           </div>
         ) : (
-          <div className="Sheets-Upload">Upload</div>
+          <div className="Sheets-Upload">
+            {progress ? (
+              <progress value={progress} max={100} width="300" />
+            ) : (
+              <form className="Sheets-Form" onSubmit={handleUpload}>
+                <input type="file" />
+                <input
+                  type="text"
+                  value={sheet?.name}
+                  onBlur={(e) => {
+                    const values = sheet;
+                    values.name = e.target.value;
+                    setSheet(values);
+                  }}
+                />
+                <input
+                  type="text"
+                  value={sheet?.nd}
+                  onBlur={(e) => {
+                    const values = sheet;
+                    values.nd = e.target.value;
+                    setSheet(values);
+                  }}
+                />
+                <img src={img} alt={"img"} />
+                <button type="submit">Enviar</button>
+              </form>
+            )}
+          </div>
         )}
       </div>
     </div>
