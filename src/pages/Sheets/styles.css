@@ -37,7 +37,17 @@
 }
 
 .Sheets-Label {
-  display: grid;
-  grid-template-columns: 2fr 5fr;
-  align-items: center;
+  display: flex;
+  text-align: center;
+  min-width: 400px;
+}
+
+.Sheets-Name {
+  width: 100%;
+  text-align: center;
+}
+
+.Sheets-Nd {
+  width: 20%;
+  text-align: center;
 }

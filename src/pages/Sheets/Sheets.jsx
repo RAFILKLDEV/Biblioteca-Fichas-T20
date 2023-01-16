@@ -89,25 +89,31 @@ export function Sheets() {
             ) : (
               <form className="Sheets-Form" onSubmit={handleUpload}>
                 <input type="file" />
-                <input
-                  type="text"
-                  value={sheet?.name}
-                  onBlur={(e) => {
-                    const values = sheet;
-                    values.name = e.target.value;
-                    setSheet(values);
-                  }}
-                />
-                <input
-                  type="text"
-                  value={sheet?.nd}
-                  onBlur={(e) => {
-                    const values = sheet;
-                    values.nd = e.target.value;
-                    setSheet(values);
-                  }}
-                />
-                <img src={img} alt={"img"} />
+                <div className="Sheets-Label">
+                  <input
+                    className="Sheets-Name"
+                    type="text"
+                    value={sheet?.name}
+                    placeholder="Nome..."
+                    onBlur={(e) => {
+                      const values = sheet;
+                      values.name = e.target.value;
+                      setSheet(values);
+                    }}
+                  />
+                  <input
+                    className="Sheets-Nd"
+                    type="text"
+                    value={sheet?.nd}
+                    placeholder="Nd..."
+                    onBlur={(e) => {
+                      const values = sheet;
+                      values.nd = e.target.value;
+                      setSheet(values);
+                    }}
+                  />
+                </div>
+                <img src={"https://cdn.discordapp.com/attachments/896108335059841114/1044319058209808454/unknown.png"} alt={"img"} />
                 <button type="submit">Enviar</button>
               </form>
             )}
